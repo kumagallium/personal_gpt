@@ -1,9 +1,10 @@
 <template>
   <div class="d-flex justify-center mt-10">
     <div>
-      <h1>Custom Chatbot using OpenAI GPT-3</h1>
+      <h1>Personal Chatbot</h1>
       <v-form @submit.prevent>
         <v-text-field
+          class="mt-5"
           v-model="message"
           label="Enter your prompt"
         ></v-text-field>
