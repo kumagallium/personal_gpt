@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  personal_gpt:
+    build: .
+    container_name: personal_gpt
+    restart: always
+    ports:
+      - 3000:3000
+      - 24678:24678
+    stdin_open: true
+    volumes:
+      - ./personal_gpt:/code
+      - /code/node_modules
+    tty: true
+    command: npm run dev
+  
