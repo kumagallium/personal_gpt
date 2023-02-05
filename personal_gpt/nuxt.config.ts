@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     	}
   	},
   	runtimeConfig: {
+		basic_auth_enabled: process.env.BASIC_AUTH_ENABLED,
+		basic_auth_user: process.env.BASIC_AUTH_USER,
+		basic_auth_password: process.env.BASIC_AUTH_PASSWORD,
 		public: {
 			API_KEY: process.env.API_KEY,
 		}
