@@ -1,13 +1,14 @@
 <template>
   <div class="d-flex justify-center mt-10">
-    <div>
-      <h1>Personal Chatbot</h1>
+    <div class="w-75">
+      <h1 class="text-center">Personal GPT</h1>
       <v-form @submit.prevent>
-        <v-text-field
+        <v-textarea
           class="mt-5"
           v-model="message"
+          :auto-grow="true"
           label="Enter your prompt"
-        ></v-text-field>
+        ></v-textarea>
         <v-btn @click="sendMessage">Send</v-btn>
       </v-form>
 
