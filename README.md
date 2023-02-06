@@ -1,42 +1,57 @@
-# Nuxt 3 Minimal Starter
+# Personal GPT
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Table of Contents
+- [Personal GPT](#personal-gpt)
+	- [Table of Contents](#table-of-contents)
+	- [Introduction](#introduction)
+	- [Prerequisites](#prerequisites)
+	- [Installation](#installation)
+		- [For local PC](#for-local-pc)
+		- [For vercel](#for-vercel)
+	- [Author](#author)
+	- [License](#license)
 
-## Setup
+<a name="intro"></a>
+## Introduction
+This application is a personal chatbot using the OpenAI API. The language model is not ChatGPT, but a GPT3 model (davinci).
 
-Make sure to install the dependencies:
 
-```bash
-# yarn
-yarn install
+<a name="install"></a>
+## Prerequisites
+* Docker
+* Docker Compose
 
-# npm
-npm install
-
-# pnpm
-pnpm install
+## Installation
+### For local PC
+Run the following commands in a terminal.
+```sh
+cd YOUR_WORKSPACE
+git clone https://github.com/kumagallium/personal_gpt.git
+cd personal_gpt
 ```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
+Create an environment variable file (.env) like the following and place it in the root directory.
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
+API_KEY=sk-xxxxx
+BASIC_AUTH_USER=xxxxx
+BASIC_AUTH_PASSWORD=xxxxx
+BASIC_AUTH_ENABLED=true
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
+This application can be started using docker-compose.
 ```
+docker-compose build
+docker-compose up
+```
+You can access this application at the following URL.
+http://localhost:3000/
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### For vercel
+This application can be deployed to a pro-at form such as Vercel.
+Just import this github repository you forked with vercel and set environment variables.
+
+<a name="author"></a>
+## Author
+This software was primarily written by Masaya Kumagai. 
+
+<a name="license"></a>
+## License
+This codes are released under the MIT License.
